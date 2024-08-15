@@ -19,44 +19,14 @@ const Header = () => {
 
 
  
-     <div className=' h-full '>
+     {/* <div className=' flex-hidden md:flex  h-full '>
      <ul className="flex  h-full items-center space-x-4 list-none gap-6">
-        <Link to="/" className="hover:bg-blue-600 hover:text-white text-black h-full flex items-center justify-center px-4" > Home </Link>
+        <Link to="/" className=" hover:bg-blue-600 hover:text-white text-black h-full flex items-center justify-center px-4" > Home </Link>
         <Link to="/about" className="hover:bg-blue-600 hover:text-white text-black h-full flex items-center justify-center px-4" > About </Link>
       </ul>
-
-     </div>
+     </div> */}
       
-
-
-
-
-
-
-      {/* <nav className="flex  h-full items-center justify-center">
-        <ul className="flex h-full items-center space-x-4 list-none">
-          <li>
-            <Link
-              to="/"
-              className="hover:bg-blue-600 hover:text-white h-full flex text-black items-center justify-center px-4"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className="hover:bg-blue-600 hover:text-white text-black h-full flex items-center justify-center px-4"
-            >
-              About
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
-
-
-
-
+      
       <div className="flex gap-2">
         {!localStorage.getItem('token') ? (
           <>
