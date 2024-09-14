@@ -19,7 +19,7 @@ const Header = () => {
       </Link>
 
 
-      {/* Desktop Menu (visible on large screens) */}
+   
       <nav className="lg:mr-[150px]  ">
         <ul className="flex flex-row gap-8">
           <li>
