@@ -11,7 +11,7 @@ import { useState } from 'react';
 function App() {
 
   const [data, setData] = useState([]);
- 
+
   const show = async () => {
     const response = await fetch(SummeryApi.show.url, {
       method: SummeryApi.show.method,
@@ -27,7 +27,7 @@ function App() {
     <>
 
       <Context.Provider value={{
-        show ,//fetching data function
+        show,//fetching data function
         data  // fetching data
       }}>
 

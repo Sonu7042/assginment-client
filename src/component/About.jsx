@@ -10,13 +10,13 @@ const About = () => {
         <div className='mt-8'>
           <span className='font-bold'>important:</span> This is CRUD Web Appication Assignment.
           I have used react js, node js, mongodb and tailwind.
-          This is hard work project.
-          I have use lots of new concept in this project.
+          This is crud project.
+          
 
            <br />
            <br />
 
-          <p>Lets talk about what are features. There is login and signup features. If you come on first time. You need to singup then login. You redirect home page. There is form. Where you can enter your details. You can see details below the form. what have you entered. There is delete option and edit.</p>
+          <p>Lets talk about what are features in this form. Where you can enter your details. You can see details below the form. what have you entered. There is delete option and edit.</p>
 
         </div>
 

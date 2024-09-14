@@ -23,7 +23,7 @@ const ShowData = () => {
       method: SummeryApi.delete.method
     });
     const json = await response.json();
-    if(json.success){
+    if (json.success) {
       toast.success(json.message)
     }
     show();
@@ -44,7 +44,7 @@ const ShowData = () => {
     setEditData({ ...editData, [name]: value });
   };
 
-  
+
 
 
 
@@ -55,10 +55,10 @@ const ShowData = () => {
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify({ id:editId, ...editData})
+      body: JSON.stringify({ id: editId, ...editData })
     });
     const json = await response.json();
-    if(json.success){
+    if (json.success) {
       toast.success(json.message)
     }
     setEditMode(false);
@@ -68,7 +68,7 @@ const ShowData = () => {
   return (
     <>
 
-    {/* this is edite form */}
+      {/* this is edite form */}
       {editMode && (
         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
           <div className="bg-white p-8 rounded">
@@ -97,9 +97,9 @@ const ShowData = () => {
               <div className="mb-4">
                 <label className="block text-gray-700">Password</label>
                 <input
-                  type="password"
-                  name="password"
-                  value={editData.password}
+                  type="text"
+                  name="address"
+                  value={editData.address}
                   onChange={handleInputChange}
                   className="w-full p-2 border border-gray-300 rounded"
                 />
@@ -118,8 +118,8 @@ const ShowData = () => {
                 <label className="block text-gray-700">Role</label>
                 <input
                   type="text"
-                  name="role"
-                  value={editData.role}
+                  name="gender"
+                  value={editData.gender}
                   onChange={handleInputChange}
                   className="w-full p-2 border border-gray-300 rounded"
                 />
@@ -143,9 +143,9 @@ const ShowData = () => {
               <tr>
                 <th className="py-2 px-4 border-b">Name</th>
                 <th className="py-2 px-4 border-b">Email</th>
-                <th className="py-2 px-4 border-b">Password</th>
+                <th className="py-2 px-4 border-b">Address</th>
                 <th className="py-2 px-4 border-b">Contact</th>
-                <th className="py-2 px-4 border-b">Role</th>
+                <th className="py-2 px-4 border-b">Gender</th>
                 <th className="py-2 px-4 border-b">Delete</th>
                 <th className="py-2 px-4 border-b">Edit</th>
               </tr>
@@ -155,9 +155,9 @@ const ShowData = () => {
                 <tr key={index} className="hover:bg-gray-100">
                   <td className="py-2 px-4 border-b">{item.name}</td>
                   <td className="py-2 px-4 border-b">{item.email}</td>
-                  <td className="py-2 px-4 border-b">{item.password}</td>
+                  <td className="py-2 px-4 border-b">{item.address}</td>
                   <td className="py-2 px-4 border-b">{item.contact}</td>
-                  <td className="py-2 px-4 border-b">{item.role}</td>
+                  <td className="py-2 px-4 border-b">{item.gender}</td>
                   <td className="py-2 px-4 border-b hover:bg-red-500 flex text-center justify-center text-2xl" onClick={() => deleteData(item._id)}><MdDelete /></td>
                   <td className="py-2 px-4 border-b hover:bg-blue-500  text-center justify-center text-2xl" onClick={() => openEditForm(item)}><FaUserEdit /></td>
                 </tr>

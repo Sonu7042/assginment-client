@@ -1,59 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 
 const Header = () => {
-  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/login');
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <header className="flex justify-between items-center px-6 h-[80px] shadow fixed w-full bg-white z-10">
-      <h2 className="font-bold text-2xl">
-        <Link to="/">Assignment</Link>
-      </h2>
+    <header className="bg-white h-20 shadow fixed w-full flex items-center  justify-between">
+
+      {/* Logo */}
+      <Link to="/" className="text-2xl font-bold m-8">
+        Sikaria Tech
+      </Link>
 
 
-
- 
-     {/* <div className=' flex-hidden md:flex  h-full '>
-     <ul className="flex  h-full items-center space-x-4 list-none gap-6">
-        <Link to="/" className=" hover:bg-blue-600 hover:text-white text-black h-full flex items-center justify-center px-4" > Home </Link>
-        <Link to="/about" className="hover:bg-blue-600 hover:text-white text-black h-full flex items-center justify-center px-4" > About </Link>
-      </ul>
-     </div> */}
-      
-      
-      <div className="flex gap-2">
-        {!localStorage.getItem('token') ? (
-          <>
-            <Link
-              to="/signup"
-              className="bg-blue-500 px-4 py-2 rounded-2xl font-medium text-white hover:bg-blue-600"
-            >
-              SignUp
+      {/* Desktop Menu (visible on large screens) */}
+      <nav className="lg:mr-[150px]  ">
+        <ul className="flex flex-row gap-8">
+          <li>
+            <Link to="/" className="hover:bg-blue-600 py-2 px-4 font-medium hover:text-white">
+              Home
             </Link>
-            <Link
-              to="/login"
-              className="bg-blue-500 px-4 py-2 rounded-2xl font-medium text-white hover:bg-blue-600"
-            >
-              Login
+          </li>
+          <li>
+            <Link to="/about" className="hover:bg-blue-600 py-2 px-4 font-medium hover:text-white">
+              About
             </Link>
-          </>
-        ) : (
-          <button
-            className="bg-blue-500 px-4 py-2 rounded-2xl font-medium text-white hover:bg-blue-600"
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
-        )}
-      </div>
+          </li>
+        </ul>
+      </nav>
+
+
+
+
+
     </header>
-  );
+  )
 };
 
 export default Header;

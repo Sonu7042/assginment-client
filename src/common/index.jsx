@@ -1,34 +1,26 @@
 
-// const host= 'http://localhost:9000'
-const host= 'https://assignment-backend-m5j5.onrender.com'
+const host = 'http://localhost:9000'
+// const host = 'https://assignment-backend-m5j5.onrender.com'
 
 
-const SummeryApi={
+const SummeryApi = {
 
-    signup:{
-        url: `${host}/signup`,
-        method : 'post'
-    },
 
-    login:{
-        url: `${host}/login`,
-        method : 'post'
-    },
-    add:{
+    add: {
         url: `${host}/add`,
         method: "post"
     },
-    show:{
+    show: {
         url: `${host}/show`,
-        method : "get"
+        method: "get"
     },
 
-    delete:{
+    delete: {
         url: `${host}/delete`,
-        method : "delete"
+        method: "delete"
     },
 
-    update:{
+    update: {
         url: `${host}/update`,
         method: "post"
     }
