@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
-import { IoClose } from 'react-icons/io5';
+
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+ 
 
   return (
     <header className="bg-white h-20 shadow fixed w-full flex items-center  justify-between">
 
       {/* Logo */}
-      <Link to="/" className="text-2xl font-bold m-8">
+      <Link to="/" className="text-2xl font-bold m-5">
         Sikaria Tech
       </Link>
 
@@ -34,10 +29,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-
-
-
-
 
     </header>
   )
