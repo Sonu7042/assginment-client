@@ -1,6 +1,6 @@
 
-const host = 'http://localhost:9000'
-// const host = 'https://assignment-backend-m5j5.onrender.com'
+// const host = 'http://localhost:9000'
+const host = 'https://assignment-backend-m5j5.onrender.com'
 
 
 const SummeryApi = {
